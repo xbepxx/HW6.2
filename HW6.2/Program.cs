@@ -13,11 +13,12 @@ namespace HW6._2
             Console.WriteLine("Введите предложение. Предложение представляет собой слова, разделенные пробелом. Знаки препинания не используются.");
             string textinsert = Console.ReadLine();
             textinsert = textinsert.Replace(" ", "");
+            textinsert = textinsert.ToLower();
             char[] charArray = textinsert.ToCharArray();
             bool a = true;
             for (int i = 0; i < charArray.Length/2; i++)
             {
-                if (charArray[i] != charArray[charArray.Length - i - 1])
+                if (charArray[i] != charArray[charArray.Length - i-1])
                 {
                     a = false;
                 }
